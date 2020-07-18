@@ -4,7 +4,7 @@
 #
 #	Ramos Guerrero Luis
 #	Métodos Numéricos 2
-#	UNAM
+#	Lic. en Matemáticas Aplicadas y Computación, UNAM
 
 ##################################################################################################
 
@@ -30,7 +30,7 @@ def main():
 	print("\n\n\t [  D A T O S  ]")
 
 	print("\n\t Puntos a interpolar e.g. (x1,y1),(x2,y2),...,(xn,yn):")
-	points = [ x for x in eval( input("\n\t ►  ") ) ]
+	points = [x for x in eval( input("\n\t ►  ") )]
 
 	print("\n\t Selecciona el tipo de funcion buscada:")
 	print("\t   [1] P(x) = anx^n + ... + a2x^2 + a1x + a0")
@@ -49,7 +49,7 @@ def main():
 	elif option == 3:
 		degree = -2
 		
-	else: 
+	else:
 	    print("\n\t [!]Error: Opcion no existente.")
 	    return
 
@@ -57,7 +57,7 @@ def main():
 		
 	function = MinCuadGetFunction( points, degree )
 	print ("\n\t ■  Funcion: \n\n\t    ", function)
-	print ("\n\t ■  Error: ", round( MinCuadGetError( points, function ), 8) )
+	print ("\n\t ■  Error: ", round( MinCuadGetError( points, function ), 8 ) )
 
 
 
@@ -74,14 +74,14 @@ def MinCuadGetFunction( points, degree ):
 
 	# Se genera las funciones con los coeficientes, son simbólicas.
 	if degree >= 1:
-		function = round( C[0], 5)
-		function += sum(round( C[k], 5)*x^k for k in range ( 1, degree+1 ))
+		function = round( C[0], 5 )
+		function += sum( round( C[k], 5)*x^k for k in range ( 1, degree+1 ) )
 
 	elif degree == -1:
-		function = round( exp(C[0]), 5 )*e^(round( C[1], 5)*x)
+		function = round( exp( C[0]), 5 )*e^(round( C[1], 5 )*x)
 		
 	elif degree == -2:
-		function = round( exp(C[0]), 5 )*x^(round( C[1], 5 ) )
+		function = round( exp( C[0]), 5 )*x^(round( C[1], 5 ))
 		
 	return function
 
@@ -106,15 +106,15 @@ def MinCuadGetCoeff( points, degree ):
 	# Se deja esta condición, ya que resolver el sist. de ec. de 2x2 con determinantes es más
 	# rápido que el algoritmo que utiliza SAGE con solve
 	if degree == 1:
-		Coefs = getCoeffs2x2( X, Y, m)
+		Coefs = getCoeffs2x2( X, Y, m )
 
 	elif degree >= 2:
 		list_ecuation, a = getListEcuations( X, Y, m, n )
-		Resp = solve( list_ecuation, a, solution_dict=True)
+		Resp = solve( list_ecuation, a, solution_dict=True )
 		# Resp es de tipo simbólico y no existe un cast a real, un ejemplo para usar aproximaciones
 		# numericas es retornar un dicionario. 
 		# https://doc.sagemath.org/pdf/es/tutorial/SageTutorial.pdf pág 14
-		Coefs += [Resp[0][a[j]].n(10) for j in range ( n )]
+		Coefs += [Resp[0][a[j]].n( 10 ) for j in range( n )]
 
 	# La forma exponencial genera un sistema de 2x2 cambiando Y por sus logaritmos
 	elif degree == -1:
@@ -145,8 +145,8 @@ def getCoeffs2x2( X, Y, m ):
 	SUM_XTO2 = sum( X[i]^2 		for i in range( m ) )
 
 	print("\n\t ■  Sistema de ecuaciones: \n")
-	print("\t    " + str(round( m,5 )) + "*a0 + " + str( round( SUM_X,5 ) ) + "*a1 = " + str( round( SUM_Y, 5) ))
-	print("\t    " + str(round( SUM_X, 5)) + "*a0 + " + str( round( SUM_XTO2, 5) ) + "*a1 = " + str( round( SUM_XY, 5) ))
+	print("\t    " + str( round( m,5 ) ) + "*a0 + " + str( round( SUM_X,5 ) ) + "*a1 = " + str( round( SUM_Y, 5) ))
+	print("\t    " + str( round( SUM_X, 5) ) + "*a0 + " + str( round( SUM_XTO2, 5 ) ) + "*a1 = " + str( round( SUM_XY, 5 ) ))
 
 	a0 = (SUM_XTO2*SUM_Y - SUM_XY*SUM_X) / (m*SUM_XTO2 - SUM_X^2 )
 	a1 = (m*SUM_XY - SUM_X*SUM_Y) / (m*SUM_XTO2 - SUM_X^2)
@@ -179,15 +179,15 @@ def getListEcuations( X, Y, m, n ):
 		SUMAS_X = []
 		
 	for j in range ( n ):
-		ecuation = sum(SUMAS[j][k]*a[k] for k in range( n ))
+		ecuation = sum( SUMAS[j][k]*a[k] for k in range( n ) )
 		# SUMAS_Y[j] se resta de la ecuación, porque se traslado al otro lado del igual
 		# se intentó con ecuation == SUMAS_Y[j] sin éxito
 		ecuation = ecuation - SUMAS_Y[j]
-		list_ecuation.append(ecuation)
+		list_ecuation.append( ecuation )
 
 	print("\n\t ■  Sistema de ecuaciones: \n")
 	for elem in list_ecuation:
-		print ("\t    " + str(elem) + " = 0 ")
+		print ("\t    " + str( elem ) + " = 0 ")
 			
 	return list_ecuation, a
 
