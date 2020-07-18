@@ -5,6 +5,7 @@
 # Se solicitará al usuario ingresar de forma simbólica el valor de cada incógnita ya despe
 # jada, debido a que la funcion solve() no siempre devuelve el despeje simbólico. 
 # Resuelve sistemas de máximo tres incógnitas.
+# Cambios
 # //
 
 
