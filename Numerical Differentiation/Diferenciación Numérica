@@ -19,8 +19,8 @@ def main():
 		print("\n\n\t [  D A T O S  ]")
 		print("\n\t Selecciona la formula:")
 		print("\t   [1] Progresiva / Regresiva")
-		print("\t   [2] Central")
-		print("\t   [3] Tres puntos")
+		print("\t   [2] Tres Puntos Centrada")
+		print("\t   [3] Tres puntos Progresiva")
 		print("\t   [4] Cinco Puntos")
 		option = int( input("\n\t ►  ") )
 
@@ -28,8 +28,6 @@ def main():
 			print("\n\t [!]Error: Opcion no existente.")
 			continue
 			
-		print("\n\t Valor de x0:")
-		x_0 = float( input("\n\t ►  ") )
 		print("\n\t Valor de h:")
 		h = float( input("\n\t ►  ") )
 		print_sol ( option )
@@ -41,7 +39,7 @@ def main():
 				print ("\n\t Debes ingresar 2 valores f(x0), f(x0 + h).")
 				continue
 			else:
-				f_dif, error = dif_progressive( x_0, h, Y )
+				f_dif = dif_progressive( h, Y )
 				break;
 				
 		elif option == 2:
@@ -49,7 +47,7 @@ def main():
 				print ("\n\t Debes ingresar 2 valores f(x0 - h), f(x0 + h).")
 				continue
 			else:
-				f_dif, error = dif_central( x_0, h, Y )
+				f_dif = dif_central( x_0, h, Y )
 				break;
 				
 		elif option == 3:
@@ -57,7 +55,7 @@ def main():
 				print ("\n\t Debes ingresar 3 valores f(x0), f(x + h), f(x + 2h).")
 				continue
 			else:
-				f_dif, error = dif_3p( x_0, h, Y )
+				f_dif = dif_3p( x_0, h, Y )
 				break;
 				
 		elif option == 4:
@@ -66,7 +64,7 @@ def main():
 				print ("\n\t Debes ingresar 4 valores f(x0 - 2h), f(x0 - h), f(x + h), f(x + 2h).")
 				continue
 			else:
-				f_dif, error = dif_5p( x_0, h, Y )
+				f_dif = dif_5p( x_0, h, Y )
 				break;
 		else:
 			pass
@@ -75,7 +73,7 @@ def main():
 	print("\n\n\n\t [  R E S U L T A D O S  ]")
 	
 	print ("\n\t ■  F_dif(x0) = ", f_dif)
-	print ("\n\t ■  Error = ", error)
+
 
 	return
 
@@ -96,22 +94,21 @@ def print_sol ( option ):
 
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
-def dif_progressive( x_0, h, Y ):
-	return (Y[1] - Y[0]) / h, (abs(h)) / (2*x_0^2)
-
+def dif_progressive( h, Y ):
+	return (Y[1] - Y[0]) / h
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
-def dif_central( x_0, h, Y ):
+def dif_central( h, Y ):
 	return (Y[1] - Y[0]) / 2*h
 
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
-def dif_3p( x_0, h, Y ):
+def dif_3p( h, Y ):
 	return (-3*Y[0] + 4*Y[1] - Y[2]) / 2*h
 
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
-def dif_5p( x_0, h, Y ):
+def dif_5p( h, Y ):
 	return (Y[0] - 8*Y[1] + 8*Y[2] - Y[3]) / 12*h
 
 
@@ -120,4 +117,3 @@ def dif_5p( x_0, h, Y ):
 if __name__ == '__main__':
     import sys
     sys.exit( main() )
-
