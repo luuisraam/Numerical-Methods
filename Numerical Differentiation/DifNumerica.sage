@@ -2,7 +2,7 @@
 
 #       DIFERENCIACIÓN NUMÉRICA
 #
-#	Ramos Guerrero Luis
+#	Ramos Guerrero LuisDiferenciación Numérica
 #	Métodos Numéricos 2
 #	Lic. en Matemáticas Aplicadas y Computación, UNAM
 
