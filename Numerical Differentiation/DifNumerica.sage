@@ -9,7 +9,6 @@
 ##################################################################################################
 
 
-
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
 def main():
 
@@ -20,12 +19,14 @@ def main():
 		print("\n\n\t [  D A T O S  ]")
 		print("\n\t Selecciona la formula:")
 		print("\t   [1] Progresiva / Regresiva")
-		print("\t   [2] Tres Puntos Centrada")
-		print("\t   [3] Tres puntos Progresiva")
-		print("\t   [4] Cinco Puntos")
+		print("\t   [2] Tres Puntos Central")
+		print("\t   [3] Tres Puntos Progresiva")
+		print("\t   [4] Cinco Puntos Central")
+		print("\t   [5] Cinco Puntos Progresiva")
+		print("\t   [6] Segunda Derivada")
 		option = int( input("\n\t ►  ") )
 
-		if option < 1 or option > 4:
+		if option < 1 or option > 6:
 			print("\n\t [!]Error: Opcion no existente.")
 			continue
 			
@@ -42,31 +43,47 @@ def main():
 			else:
 				f_dif = dif_progressive( h, Y )
 				break;
-				
+	
 		elif option == 2:
 			if len( Y ) != 2:
 				print ("\n\t Debes ingresar 2 valores f(x0 - h), f(x0 + h).")
 				continue
 			else:
-				f_dif = dif_central( x_0, h, Y )
+				f_dif = dif_3pCentral( h, Y )
 				break;
 				
 		elif option == 3:
 			if len( Y ) != 3:
-				print ("\n\t Debes ingresar 3 valores f(x0), f(x + h), f(x + 2h).")
+				print ("\n\t Debes ingresar 3 valores f(x0), f(x0 + h), f(x0 + 2h).")
 				continue
 			else:
-				f_dif = dif_3p( x_0, h, Y )
+				f_dif = dif_3p( h, Y )
 				break;
 				
 		elif option == 4:
-			# Es de 5 puntos, pero f(x0) no se utiliza
 			if len( Y ) != 4:
-				print ("\n\t Debes ingresar 4 valores f(x0 - 2h), f(x0 - h), f(x + h), f(x + 2h).")
+				print ("\n\t Debes ingresar 4 valores f(x0 - 2h), f(x0 - h), f(x0 + h), f(x0 + 2h).")
 				continue
 			else:
-				f_dif = dif_5p( x_0, h, Y )
+				f_dif = dif_5pCentral( h, Y )
 				break;
+
+		elif option == 5:
+			if len( Y ) != 5:
+				print ("\n\t Debes ingresar 5 valores f(x0), f(x0 + h), f(x0 + 2h), f(x0 + 3h), f(x0 + 4h):.")
+				continue
+			else:
+				f_dif = dif_5p( h, Y )
+				break;
+
+		elif option == 6:
+			if len( Y ) != 3:
+				print ("\n\t Debes ingresar 3 valores f(x0 - h), f(x0), f(x0 + h).")
+				continue
+			else:
+				f_dif = dif2_p( h, Y )
+				break;
+				
 		else:
 			pass
 
@@ -87,9 +104,13 @@ def print_sol ( option ):
 	elif option == 2:
 		print ("\n\t Escribe los valores f(x0 - h), f(x0 + h):")
 	elif option == 3:
-		print ("\n\t Escribe los valores f(x0), f(x + h), f(x + 2h):")	
+		print ("\n\t Escribe los valores f(x0), f(x0 + h), f(x0 + 2h):")	
 	elif option == 4:
-		print ("\n\t Escribe los valores f(x0 - 2h), f(x0 - h), f(x + h), f(x + 2h):")
+		print ("\n\t Escribe los valores f(x0 - 2h), f(x0 - h), f(x0 + h), f(x0 + 2h):")
+	elif option == 5:
+		print ("\n\t Escribe los valores f(x0), f(x0 + h), f(x0 + 2h), f(x0 + 3h), f(x0 + 4h):")
+	elif option == 6:
+		print ("\n\t Escribe los valores f(x0 - h), f(x0), f(x0 + h):")
 		
 	return
 
@@ -99,19 +120,25 @@ def dif_progressive( h, Y ):
 	return (Y[1] - Y[0]) / h
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
-def dif_central( h, Y ):
-	return (Y[1] - Y[0]) / 2*h
-
+def dif_3pCentral( h, Y ):
+	return (Y[1] - Y[0]) / (2*h)
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
 def dif_3p( h, Y ):
-	return (-3*Y[0] + 4*Y[1] - Y[2]) / 2*h
+	return (-3*Y[0] + 4*Y[1] - Y[2]) / (2*h)
 
+# < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
+def dif_5pCentral( h, Y ):
+	return (Y[0] - 8*Y[1] + 8*Y[2] - Y[3]) / (12*h)
 
 # < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
 def dif_5p( h, Y ):
-	return (Y[0] - 8*Y[1] + 8*Y[2] - Y[3]) / 12*h
+	return (-25*Y[0] + 48*Y[1] - 36*Y[2] + 16*Y[3] - 3*Y[4]) / (12*h)
 
+# < >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >
+def  dif2_p( h, Y ):
+	return (Y[0] - 2*Y[1] + Y[2]) / (h**2)
+	
 
 
 
