@@ -27,7 +27,12 @@ def main():
 	print("\n\t ■  Matriz:")
 	for j in range ( N_K ):
 		print ("\n\t    ", N[j][:])
-	print ("\n\t ■  f'(x):  ", N[0][N_K-1])
+	print ("\n\t ■  f'(x) aprox:  ", N[0][N_K-1])
+
+	g(x) = diff(f,x)
+	
+	print ("\n\t ■  Error:  ", abs( g(x0) - N[0][N_K-1] ).n(30))
+	print ("\n\n\t ■  f'(x) real:  ", g(x0).n(30))
 
 
 
