@@ -1,6 +1,6 @@
 ##################################################################################################
 
-#       CÁLCULO DEL ERROR EN DIFERENCIACIÓN NUMÉRICA
+#       CÁLCULO DEL ERROR EN INTEGRACIÓN NUMÉRICA
 #
 #	Ramos Guerrero Luis
 #	Métodos Numéricos 2
