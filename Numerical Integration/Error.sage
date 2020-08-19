@@ -1,3 +1,14 @@
+##################################################################################################
+
+#       CÁLCULO DEL ERROR EN DIFERENCIACIÓN NUMÉRICA
+#
+#	Ramos Guerrero Luis
+#	Métodos Numéricos 2
+#	Lic. en Matemáticas Aplicadas y Computación, UNAM
+
+##################################################################################################
+
+
 def main():
 
 	list_ecuations = [2/(x-4), x**2*(log(x)), x**2*e**-x, 2*x/(x**2-4), 2/(x**2-4), x*sin(x), e**(3*x)*sin(2*x)]
