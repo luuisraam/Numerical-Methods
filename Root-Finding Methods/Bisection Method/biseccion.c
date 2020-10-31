@@ -29,10 +29,10 @@
  * ción, será necesario modificar las funciones f, g, h, i del código.
  * Algunos ejemplos:
  * 
- *		Notación:	f(x)=x³-x-1 				Código: 	pow(x,3)-x-1
- * 		Notación:	g(x)=-2x³-4x²+4x+4 			Código: 	((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4
- *		Notación:	h(x)=x-2^(-x) 1				Código: 	x-pow(2,-x)
- *		Notación:	i(x)=e^x+2^(-x)+2cos(x)-6	Código: 	pow(EULER,x)+pow(2,-x)+(2*cos(x))-6
+ *	Notación:	f(x)=x³-x-1					Código:		pow(x,3)-x-1
+ *	Notación:	g(x)=-2x³-4x²+4x+4			Código:		((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4
+ *	Notación:	h(x)=x-2^(-x) 1				Código:		x-pow(2,-x)
+ *	Notación:	i(x)=e^x+2^(-x)+2cos(x)-6	Código:		pow(EULER,x)+pow(2,-x)+(2*cos(x))-6
  *
  * 
  * Cambios a futuro:
