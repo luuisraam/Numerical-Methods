@@ -1,14 +1,18 @@
 # Numerical Methods
 
-**_Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C._**
+**Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C.**
+
 
 ## Clasificación de los Métoodos
 
+- Ceros de la función
+  - Método de Newton
+  - Método de Bisección
+  
 - Sistemas de Ecuaciones No Lineales
+  - Ḿétodo de Punto Fijo
   - Método de Newton
   - Método de Gauss Seidel
-
-- Sistemas de Ecuaciones Lineales
 
 - Interpolación
   - Método de Mínimos Cuadrados
@@ -18,14 +22,10 @@
 - Integración Numérica
 
 
+## Instalación 🔧
+
 ### Pre-requisitos 📋
 
-
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
 
 ```
 Da un ejemplo
