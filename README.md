@@ -5,15 +5,14 @@
 ## Clasificación de los Métoodos
 
 - Sistemas de Ecuaciones No Lineales
-
-- Método de Newton
-
-- Método de Gauss Seidel
+  - Método de Newton
+  - Método de Gauss Seidel
 
 - Sistemas de Ecuaciones Lineales
 
 - Interpolación
-
+  - Método de Mínimos Cuadrados
+  
 - Diferenciación Numérica
 
 - Integración Numérica
