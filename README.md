@@ -3,9 +3,9 @@
 
 ## Clasificación de los Métoodos
 
-- Obtención de la Raíz
+- Raíces de la función
   - Método de Newton
-  - Método de Bisección
+  - Método de Bisección / Bisection Method - biseccion.c
   
 - Solución de Sistemas de Ecuaciones No Lineales
   - Ḿétodo de Punto Fijo
