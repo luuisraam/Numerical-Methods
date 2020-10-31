@@ -22,53 +22,28 @@
 - Integración Numérica
 
 
-## Instalación 🔧
+## Ejecución 🔧
 
-Todos los archivos son códigos fuente. 
-
-### Pre-requisitos 📋
-
+Lenguaje C
 
 ```
-Da un ejemplo
+gcc -Wall -o ejemplo ejemplo.c -lm
+./ejemplo
 ```
 
-_Y repite_
-
+SageMath
 ```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
+sage ejemplo.sage
 ```
 
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
+## Pruebas ⚙️
 
 ## Construido con 🛠️
 
 * [SageMath](https://www.sagemath.org/) - El framework web usado
 
 ## Versionado 📌
+* V1.1 - En construcción 
 
 ## Autores ✒️
 
