@@ -24,6 +24,8 @@
 
 ## Instalación 🔧
 
+Todos los archivos son códigos fuente. 
+
 ### Pre-requisitos 📋
 
 
