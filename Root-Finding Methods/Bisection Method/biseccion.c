@@ -7,7 +7,7 @@
  *
  * LEEME!!!!
  * 
- * 						Método de Bisección
+ * 									Método de Bisección
  * 
  * Objetivo:
  *
@@ -29,10 +29,10 @@
  * ción, será necesario modificar las funciones f, g, h, i del código.
  * Algunos ejemplos:
  * 
- *	Notación:	f(x)=x³-x-1					Código:		pow(x,3)-x-1
- *	Notación:	g(x)=-2x³-4x²+4x+4			Código:		((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4
- *	Notación:	h(x)=x-2^(-x) 1				Código:		x-pow(2,-x)
- *	Notación:	i(x)=e^x+2^(-x)+2cos(x)-6	Código:		pow(EULER,x)+pow(2,-x)+(2*cos(x))-6
+ *  Notación:   f(x)=x³-x-1                     Código:     pow(x,3)-x-1
+ *  Notación:   g(x)=-2x³-4x²+4x+4              Código:     ((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4
+ *  Notación:   h(x)=x-2^(-x) 1                 Código:     x-pow(2,-x)
+ *  Notación:   i(x)=e^x+2^(-x)+2cos(x)-6       Código:     pow(EULER,x)+pow(2,-x)+(2*cos(x))-6
  *
  * 
  * Cambios a futuro:
@@ -49,65 +49,65 @@
 #define EULER 2.718281
 #define ITERATION_MAX 100
 
-void	reg_tolerance(double*);
-void 	reg_range(double*, double(*ptr_f)());
-bool	is_root(double, double(*)());
-bool 	bolzano(double*, double(*)());
-double 	bisection_method(double*, double relative_e, double(*)());
-double 	midpoint(double*);
-void 	tabulation (double*, double*, double(*ptr_f)());
-void 	print_line();
+void    reg_tolerance(double*);
+void    reg_range(double*, double(*ptr_f)());
+bool    is_root(double, double(*)());
+bool    bolzano(double*, double(*)());
+double  bisection_method(double*, double relative_e, double(*)());
+double  midpoint(double*);
+void    tabulation (double*, double*, double(*ptr_f)());
+void    print_line();
 
 // Estas son las funciones matemáticas.
-double 	f(double x);
-double 	g(double x);
-double 	h(double x);
-double 	i(double x);
+double  f(double x);
+double  g(double x);
+double  h(double x);
+double  i(double x);
 
 
 int main() {
 	
-	double 	x_[3], 
-			tolerance,
-			(*ptr_f)(double);
+    double 	x_[3],
+            tolerance,
+            (*ptr_f)(double);
 			
-	printf("\n\n\t\t ++ METODO DE BISECCION ++\n");
-	printf("\n     Nota: El numero max de iteraciones fue establecido en 100.\n");
-		
-	/* Se actualiza el puntero a la funcion f */
-	ptr_f=f;
-	printf("\n\n     Para f(x) = x³-x-1\n");
-	reg_tolerance(&tolerance);
-	printf("\t Escribe los valores para x_0 y x_1. Sugeridos (0, 2): ");
-	reg_range(x_, ptr_f);
-	tabulation(x_, &tolerance, ptr_f);
-	printf ("\n\n\t***\n\t***\n\t***\n");
-	
-	/* Se actualiza el puntero a la funcion g */
-	ptr_f=g;
-	printf("\n     Para g(x) = -2x³-4x²+4x+4\n");
-	reg_tolerance(&tolerance);
-	printf("\t Escribe los valores para x_0 y x_1.Sugeridos (0, 2): ");
-	reg_range(x_, ptr_f);
-	tabulation(x_, &tolerance, ptr_f);
-	printf ("\n\n\t***\n\t***\n\t***\n");
-	
-	/* Se actualiza el puntero a la funcion h */
-	ptr_f=h;
-	printf("\n     Para h(x) = x-2^(-x)\n");
-	reg_tolerance(&tolerance);
-	printf("\t Escribe los valores para x_0 y x_1. Sugeridos (0, 1): ");
-	reg_range(x_, ptr_f);
-	tabulation(x_, &tolerance, ptr_f);
-	printf ("\n\n\t***\n\t***\n\t***\n");
-	
-	/* Se actualiza el puntero a la funcion i */
-	ptr_f=i;
-	printf("\n     Para i(x) = e^x+2^(-x)+2cos(x)-6\n");
-	reg_tolerance(&tolerance);
-	printf("\t Escribe los valores para x_0 y x_1. Sugeridos (1, 2): ");
-	reg_range(x_, ptr_f);
-	tabulation(x_, &tolerance, ptr_f);
+    printf("\n\n\t\t ++ METODO DE BISECCION ++\n");
+    printf("\n     Nota: El numero max de iteraciones fue establecido en 100.\n");
+
+    /* Se actualiza el puntero a la funcion f */
+    ptr_f=f;
+    printf("\n\n     Para f(x) = x³-x-1\n");
+    reg_tolerance(&tolerance);
+    printf("\t Escribe los valores para x_0 y x_1. Sugeridos (0, 2): ");
+    reg_range(x_, ptr_f);
+    tabulation(x_, &tolerance, ptr_f);
+    printf ("\n\n\t***\n\t***\n\t***\n");
+
+    /* Se actualiza el puntero a la funcion g */
+    ptr_f=g;
+    printf("\n     Para g(x) = -2x³-4x²+4x+4\n");
+    reg_tolerance(&tolerance);
+    printf("\t Escribe los valores para x_0 y x_1.Sugeridos (0, 2): ");
+    reg_range(x_, ptr_f);
+    tabulation(x_, &tolerance, ptr_f);
+    printf ("\n\n\t***\n\t***\n\t***\n");
+
+    /* Se actualiza el puntero a la funcion h */
+    ptr_f=h;
+    printf("\n     Para h(x) = x-2^(-x)\n");
+    reg_tolerance(&tolerance);
+    printf("\t Escribe los valores para x_0 y x_1. Sugeridos (0, 1): ");
+    reg_range(x_, ptr_f);
+    tabulation(x_, &tolerance, ptr_f);
+    printf ("\n\n\t***\n\t***\n\t***\n");
+
+    /* Se actualiza el puntero a la funcion i */
+    ptr_f=i;
+    printf("\n     Para i(x) = e^x+2^(-x)+2cos(x)-6\n");
+    reg_tolerance(&tolerance);
+    printf("\t Escribe los valores para x_0 y x_1. Sugeridos (1, 2): ");
+    reg_range(x_, ptr_f);
+    tabulation(x_, &tolerance, ptr_f);
 		
 	
 return 0;
@@ -140,7 +140,7 @@ double g(double x)
  * -----------------------------------------------------------------------------------------------*/		
 double h(double x)
 {
-	return x-pow(2,-x);
+    return x-pow(2,-x);
 }
 
 
@@ -149,7 +149,7 @@ double h(double x)
  * -----------------------------------------------------------------------------------------------*/		
 double i(double x)
 {
-	return pow(EULER,x)+pow(2,-x)+(2*cos(x))-6;
+    return pow(EULER,x)+pow(2,-x)+(2*cos(x))-6;
 }
 
 
@@ -158,8 +158,8 @@ double i(double x)
  * -----------------------------------------------------------------------------------------------*/
 void reg_tolerance(double* tolerance)
 {
-	printf("\t Indica la tolerancia en formato decimal: ");
-	scanf("%lf", tolerance);	
+    printf("\t Indica la tolerancia en formato decimal: ");
+    scanf("%lf", tolerance);	
 }
 
 
@@ -168,35 +168,35 @@ void reg_tolerance(double* tolerance)
  * -----------------------------------------------------------------------------------------------*/
 void reg_range(double* x_, double(*ptr_f)())
 {
-	do 
-	{
-		/* Es cierto que o x_[0] es raiz o x[1] es raíz o ambos lo son, por lo que los if 
-		* no deben estar anidados */
-		printf("\n\t [x_0]: "); 	scanf("%lf", &x_[0]);
-		printf("\t [x_1]: "); 		scanf("%lf", &x_[1]);
-		if (is_root(x_[0], ptr_f))
-		{
-			print_line();
-			printf ("\n\t x_0 es raíz.");
-			print_line();
-		}
-		if (is_root(x_[1], ptr_f))
-		{	
-			print_line();
-			printf("\n\t x_1 es raíz.");
-			print_line();
-		}
-	
-		if (!bolzano(x_, ptr_f))
-			printf ("\n\t *Las cotas no cumplen con el teorema de Bolzano.\n");
-		else
-		{
-			printf("\n\t *Cotas validas, cumplen el teorema de bolzano.\n");
-			print_line();
-			break;
-		}
-		
-	} while(true);
+    do 
+    {
+        /* Es cierto que o x_[0] es raiz o x[1] es raíz o ambos lo son, por lo que los if 
+        * no deben estar anidados */
+    	printf("\n\t [x_0]: "); 	scanf("%lf", &x_[0]);
+        printf("\t [x_1]: "); 		scanf("%lf", &x_[1]);
+        if (is_root(x_[0], ptr_f))
+        {
+            print_line();
+            printf ("\n\t x_0 es raíz.");
+            print_line();
+        }
+        if (is_root(x_[1], ptr_f))
+        {	
+            print_line();
+            printf("\n\t x_1 es raíz.");
+            print_line();
+        }
+
+        if (!bolzano(x_, ptr_f))
+            printf ("\n\t *Las cotas no cumplen con el teorema de Bolzano.\n");
+        else
+        {
+            printf("\n\t *Cotas validas, cumplen el teorema de bolzano.\n");
+            print_line();
+            break;
+        }
+        
+    } while(true);
 }
 
 /*----------------------------------------------------------------------------------------
