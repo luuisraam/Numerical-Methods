@@ -67,7 +67,7 @@ double  i(double x);
 
 int main() {
 	
-    double 	x_[3],
+    double  x_[3],
             tolerance,
             (*ptr_f)(double);
 			
