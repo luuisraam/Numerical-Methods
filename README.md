@@ -1,10 +1,5 @@
 # Numerical Methods
-## Clasificación de los Métoodos
-
-
-# Numerical Methods
 **Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C.**
-
 
 ## Clasificación de los Métoodos
 
@@ -45,7 +40,7 @@ sage ejemplo.sage
 
 * [SageMath](https://www.sagemath.org/) - El framework web usado
 
-## Versionado 📌
+## Versión 📌
 * V1.1 - En construcción 
 
 ## Autores ✒️
@@ -56,7 +51,7 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 
 ## Licencia 📄
 
-## Expresiones de Gratitud 🎁
+## Agradecimientos 🎁
 
-* A [RuberDavid] 
-* Al Dr. Christian Rubio Montiel
+* A [RuberDavid](https://github.com/RuberDavid) por motivarme a ser mejor matemático.
+* Al Dr. Christian Rubio Montiel por mostrarme otro lado de las matemáticas.
