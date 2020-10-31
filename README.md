@@ -35,19 +35,19 @@ sage ejemplo.sage
 ```
 
 ## Pruebas ⚙️
+_En proceso de redacción._
 
 ## Construido con 🛠️
 
-* [SageMath](https://www.sagemath.org/) - El framework web usado
+* [SageMath](https://www.sagemath.org/) - Un programa matemático libre y de código abierto, un lenguaje basado en Python.
+* [Lenguaje C](https://es.wikipedia.org/wiki/Dennis_Ritchie) - 
 
 ## Versión 📌
 * V1.1 - En construcción 
 
 ## Autores ✒️
 
-* **luuisraam** [luuisraam](https://github.com/luuisraam)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Luis Ramos** [luuisraam](https://github.com/luuisraam)
 
 ## Licencia 📄
 
