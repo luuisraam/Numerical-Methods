@@ -122,7 +122,7 @@ return 0;
  * -----------------------------------------------------------------------------------------------*/		
 double f(double x)
 {
-	return pow(x,3)-x-1;
+    return pow(x,3)-x-1;
 }
 
 
@@ -131,7 +131,7 @@ double f(double x)
  * -----------------------------------------------------------------------------------------------*/		
 double g(double x)
 {
-	return ((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4;
+    return ((-2)*pow(x,3))-(4*pow(x,2))+(4*x)+4;
 }
 
 
@@ -204,10 +204,10 @@ void reg_range(double* x_, double(*ptr_f)())
  * -------------------------------------------------------------------------------------*/
 bool is_root(double x, double(*ptr_f)())
 {
-	if (ptr_f(x) == 0)
-		return true;
-	else
-		return false;
+    if (ptr_f(x) == 0)
+        return true;
+    else
+        return false;
 }
 
 
@@ -217,21 +217,22 @@ bool is_root(double x, double(*ptr_f)())
  * -----------------------------------------------------------------------------------------------*/
 bool bolzano( double* x_, double(*ptr_f)() )
 {
-	double aux;
-	if ( ( ptr_f(x_[0]) * ptr_f(x_[1]) ) < 0 )
-	{
-		/* Intercambia los valores para que el intervalo sea (x,y) / x<y) */
-		if (x_[0] > x_[1])
-		{
-			aux=x_[0];
-			x_[0]=x_[1];
-			x_[1]=aux;
-		}
-		
-		return true;
-	}
-	else
-		return false;
+    double aux;
+    
+    if ( ( ptr_f(x_[0]) * ptr_f(x_[1]) ) < 0 )
+    {
+        /* Intercambia los valores para que el intervalo sea (x,y) / x<y) */
+        if (x_[0] > x_[1])
+        {
+            aux=x_[0];
+            x_[0]=x_[1];
+            x_[1]=aux;
+        }
+        
+        return true;
+    }
+    else
+        return false;
 }
 
 
@@ -241,26 +242,26 @@ bool bolzano( double* x_, double(*ptr_f)() )
 double bisection_method( double* x_, double middle, double(*ptr_f)() ) 
 {
 	
-	/* Como ptr_f(_x_[0])<0, si ptr_f(x_[0])*ptr_f(root_a) < 0
-	 * aseguramos que la raiz existe y se cumple que x_[0]<raiz<root_a*/
-	if ( ptr_f(x_[0])*ptr_f(middle) < 0)
-	{
-		// x_[0] = x_[0] se conserva
-		x_[1] = middle;
-	}
-	/* Como ptr_f(_x_[0])<0, si ptr_f(x_[0])*ptr_f(root_a) > 0
-	 * aseguramos que la raiz existe y se cumple que root_a<raiz<x_[1]*/
-	else if (ptr_f(x_[0])*ptr_f(middle) > 0)
-	{
-		// x_[1] = x_[1] se conserva
-		x_[0] = middle;
-	}
-	else
-	{
-		return middle;
-	}
+    /* Como ptr_f(_x_[0])<0, si ptr_f(x_[0])*ptr_f(root_a) < 0
+     * aseguramos que la raiz existe y se cumple que x_[0]<raiz<root_a*/
+    if ( ptr_f(x_[0])*ptr_f(middle) < 0)
+    {
+        // x_[0] = x_[0] se conserva
+        x_[1] = middle;
+    }
+    /* Como ptr_f(_x_[0])<0, si ptr_f(x_[0])*ptr_f(root_a) > 0
+     * aseguramos que la raiz existe y se cumple que root_a<raiz<x_[1]*/
+    else if (ptr_f(x_[0])*ptr_f(middle) > 0)
+    {
+        // x_[1] = x_[1] se conserva
+        x_[0] = middle;
+    }
+    else
+    {
+        return middle;
+    }
 
-	return midpoint(x_);
+    return midpoint(x_);
 }
 
 
@@ -269,7 +270,7 @@ double bisection_method( double* x_, double middle, double(*ptr_f)() )
  * -----------------------------------------------------------------------------------------------*/
 double 	midpoint(double* x_)
 {
-	return (x_[0]+x_[1]) / 2;
+    return (x_[0]+x_[1]) / 2;
 }
 
 
@@ -278,48 +279,48 @@ double 	midpoint(double* x_)
  * -----------------------------------------------------------------------------------------------*/
 void tabulation (double* x_, double* tolerance, double(*ptr_f)() )
 {
-	double  middle, 
-			previous_middle, 
-			relative_e = 0.0;
-	
-	printf("\n\t Intervalo: (%lf, %lf)", x_[0], x_[1]);
-	printf("\n\t Limite de iteraciones: %d", ITERATION_MAX);
-	printf("\t Tolarencia: %lf", *tolerance);
-	print_line();
-	printf("\n\t [i] \t x_0 \t\t x_1 \t\t a_root \t ER");
-	print_line();
-	
-	/* Se genera la primer iteración, esta debe estar fuera del ciclo, de caso contrario
-	 * tendría errores con el cálculo del error relativo */
-	middle=midpoint(x_);
-	previous_middle=middle;
-	printf ("\n\t [1] \t %5lf \t %.9lf \t %.9lf \t %.9lf", x_[0], x_[1], middle, relative_e);
-	middle=bisection_method(x_, middle, ptr_f);
-	
-	int i = 2;
-	do 
-	{
-		relative_e=fabs((middle-previous_middle)/middle);
-		printf ("\n\t [%d] \t %5.9lf \t %.9lf \t %.9lf \t %.9lf", i, x_[0], x_[1], middle, relative_e);
-		previous_middle=middle;
-		middle=bisection_method(x_, middle, ptr_f);
+    double  middle, 
+            previous_middle, 
+            relative_e = 0.0;
 
-		if (ptr_f(middle) == 0.0)
-		{
-			printf ("\n\t [] La raíz es %lf", middle);
-			break;
-		}
-		i++;
-		
-	} while(i <= ITERATION_MAX && relative_e > *tolerance);
-	
-	print_line();
+    printf("\n\t Intervalo: (%lf, %lf)", x_[0], x_[1]);
+    printf("\n\t Limite de iteraciones: %d", ITERATION_MAX);
+    printf("\t Tolarencia: %lf", *tolerance);
+    print_line();
+    printf("\n\t [i] \t x_0 \t\t x_1 \t\t a_root \t ER");
+    print_line();
 
-	if (ptr_f(middle) != 0.0)
-	{
+    /* Se genera la primer iteración, esta debe estar fuera del ciclo, de caso contrario
+     * tendría errores con el cálculo del error relativo */
+    middle=midpoint(x_);
+    previous_middle=middle;
+    printf ("\n\t [1] \t %5lf \t %.9lf \t %.9lf \t %.9lf", x_[0], x_[1], middle, relative_e);
+    middle=bisection_method(x_, middle, ptr_f);
+
+    int i = 2;
+    do 
+    {
+        relative_e=fabs((middle-previous_middle)/middle);
+        printf ("\n\t [%d] \t %5.9lf \t %.9lf \t %.9lf \t %.9lf", i, x_[0], x_[1], middle, relative_e);
+        previous_middle=middle;
+        middle=bisection_method(x_, middle, ptr_f);
+
+        if (ptr_f(middle) == 0.0)
+        {
+            printf ("\n\t [] La raíz es %lf", middle);
+            break;
+        }
+        i++;
+        
+    } while(i <= ITERATION_MAX && relative_e > *tolerance);
+
+    print_line();
+
+    if (ptr_f(middle) != 0.0)
+    {
         printf("\n\t [] La raíz aproximada es: %.9lf", middle);
-		print_line();
-	}
+        print_line();
+    }
 
 }
 
@@ -329,5 +330,5 @@ void tabulation (double* x_, double* tolerance, double(*ptr_f)() )
  * -----------------------------------------------------------------------------------------------*/
 void print_line()
 {
-	printf("\n      -------------------------------------------------------------------------");
+    printf("\n      -------------------------------------------------------------------------");
 }
