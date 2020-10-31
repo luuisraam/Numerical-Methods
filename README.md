@@ -2,9 +2,22 @@
 
 _Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C._
 
-## Comenzando 🚀
+## Clasificación de los Métoodos 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+- Sistemas de Ecuaciones No Lineales
+
+- Método de Newton
+
+- Método de Gauss Seidel
+
+- Sistemas de Ecuaciones Lineales
+
+- Interpolación
+
+- Diferenciación Numérica
+
+- Integración Numérica
+
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
@@ -104,16 +117,3 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 ---
 ⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
 
-Sistemas de Ecuaciones No Lineales
-
-Método de Newton
-
-Método de Gauss Seidel
-
-Sistemas de Ecuaciones Lineales
-
-Interpolación
-
-Diferenciación Numérica
-
-Integración Numérica
