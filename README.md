@@ -1,6 +1,6 @@
 # Numerical Methods
 
-*_Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C._*
+**_Algunos Métodos Numéricos escritos en Sagemath (un CAS basado en Python) y en Lenguaje C._**
 
 ## Clasificación de los Métoodos
 
