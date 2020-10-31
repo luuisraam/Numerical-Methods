@@ -3,11 +3,11 @@
 
 ## Clasificación de los Métoodos
 
-- Ceros de la función
+- Obtención de la Raíz
   - Método de Newton
   - Método de Bisección
   
-- Sistemas de Ecuaciones No Lineales
+- Solución de Sistemas de Ecuaciones No Lineales
   - Ḿétodo de Punto Fijo
   - Método de Newton
   - Método de Gauss Seidel
