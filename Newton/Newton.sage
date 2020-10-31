@@ -1,5 +1,6 @@
 # //
 # Método de Newton
+# Resuelve un Sistema de Ecuaciones no Lineales de 3 ecuaciones.
 #
 # //
 
