@@ -16,7 +16,7 @@ def main():
 	x, y, z, w = var('x y z w')
 	val_norma = None
 	
-	print('\n Sea un Sistema de Ecuaciones no Lineales S(f(x,y,z), g(x,y,z), h(x,y,z), i(x,y,z)),')
+	print('\n Sea un Sistema de Ecuaciones no Lineales S(f(x,y,z), g(x,y,z), h(x,y,z))')
 	print('Ingresa los siguientes datos: ')
 	
 	f(x,y,z,w) = eval(input('\n\t f(x,y,z): '))
