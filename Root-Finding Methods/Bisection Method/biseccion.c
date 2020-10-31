@@ -7,7 +7,7 @@
  *
  * LEEME!!!!
  * 
- * 									Método de Bisección
+ * 						Método de Bisección
  * 
  * Objetivo:
  *
