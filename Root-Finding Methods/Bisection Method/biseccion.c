@@ -7,7 +7,7 @@
  *
  * LEEME!!!!
  * 
- * 									Método de Bisección
+ *                          Método de Bisección
  * 
  * Objetivo:
  *
@@ -317,7 +317,7 @@ void tabulation (double* x_, double* tolerance, double(*ptr_f)() )
 
 	if (ptr_f(middle) != 0.0)
 	{
-		printf("\n\t [] La raíz aproximada es: %.9lf", middle);
+        printf("\n\t [] La raíz aproximada es: %.9lf", middle);
 		print_line();
 	}
 
