@@ -39,15 +39,15 @@ _En proceso de redacción._
 
 ## Construido con 🛠️
 
-* [SageMath](https://www.sagemath.org/) - Un programa matemático libre y de código abierto, un lenguaje basado en Python.
-* [Lenguaje C](https://es.wikipedia.org/wiki/Dennis_Ritchie) - 
+* [SageMath](https://www.sagemath.org/) - Un programa matemático libre y de código abierto basado en Python.
+* [Lenguaje C](https://es.wikipedia.org/wiki/Dennis_Ritchie)
 
 ## Versión 📌
 * V1.1 - En construcción 
 
 ## Autores ✒️
 
-* **Luis Ramos** [luuisraam](https://github.com/luuisraam)
+* [luuisraam](https://github.com/luuisraam) - **Luis Ramos**
 
 ## Licencia 📄
 
