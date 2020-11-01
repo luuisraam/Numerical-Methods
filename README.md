@@ -4,7 +4,7 @@
 **Some Numerical Methods written in C and SageMath (a free open-source CAS, Python based).**
 
 
-## Clasificación de los Métoodos
+## Clasificación de los Métoodos [Classification of Numerical Methods]
 
 - Raíces de la función
   - Método de Newton-Raphson / Newton-Raphson Method - newton_raphson_method.c
