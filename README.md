@@ -1,14 +1,13 @@
 # Métodos Numéricos [Numerical Methods]
+
 **Algunos Métodos Numéricos escritos en C y en SageMath (un CAS libre de código abierto, basado en Python).**
-
 **Some Numerical Methods written in C and SageMath (a free open-source CAS, Python based).**
-
 
 ## Clasificación de los Métoodos [Classification of Numerical Methods]
 
-- Raíces de la función
-  - Método de Newton-Raphson / Newton-Raphson Method - newton_raphson_method.c
-  - Método de Bisección / Bisection Method - bisection_method.c
+- Raíces de la función [Root-Finding Methods]
+  - Método de Newton-Raphson [Newton-Raphson Method] - newton_raphson_method.c
+  - Método de Bisección [Bisection Method] - bisection_method.c
   
 - Solución de Sistemas de Ecuaciones No Lineales
   - Ḿétodo de Punto Fijo
