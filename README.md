@@ -1,7 +1,7 @@
 # Numerical Methods
-**Algunos Métodos Numéricos escritos en C y en SageMath un CAS libre de código abierto basado en Python.**
+**Algunos Métodos Numéricos escritos en C y en SageMath (un CAS libre de código abierto, basado en Python).**
 
-**Some Numerical Methods written in C and SageMath a free open-source mathematics software system Pythons-based.**
+**Some Numerical Methods written in C and SageMath (a free open-source CAS, Python based).**
 
 
 ## Clasificación de los Métoodos
