@@ -4,8 +4,8 @@
 ## Clasificación de los Métoodos
 
 - Raíces de la función
-  - Método de Newton
-  - Método de Bisección / Bisection Method - biseccion.c
+  - Método de Newton-Raphson / Newton-Raphson Method - newton_raphson_method.c
+  - Método de Bisección / Bisection Method - bisection_method.c
   
 - Solución de Sistemas de Ecuaciones No Lineales
   - Ḿétodo de Punto Fijo
