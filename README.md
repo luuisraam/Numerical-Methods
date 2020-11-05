@@ -1,6 +1,5 @@
 # Métodos Numéricos [Numerical Methods]
 
-
 ## Acerca de [About]
 
 **Algunos Métodos Numéricos escritos en C y en SageMath (un CAS libre de código abierto, basado en Python).**
@@ -40,10 +39,10 @@ SageMath
 sage ejemplo.sage
 ```
 
-## Pruebas ⚙️
+## Pruebas
 _En proceso de redacción._
 
-## Construido con 🛠️
+## Construido con
 
 * [SageMath - Lenguaje](https://www.sagemath.org/)
 * [C - Lenguaje](https://es.wikipedia.org/wiki/Dennis_Ritchie)
@@ -55,8 +54,6 @@ _En proceso de redacción._
 ## Autores ✒️
 
 * [luuisraam](https://github.com/luuisraam) - **Luis Ramos**
-
-## Licencia 📄
 
 ## Aportaciones
 
