@@ -60,5 +60,4 @@ _En proceso de redacción._
 
 ## Aportaciones
 
-* A [RuberDavid](https://github.com/RuberDavid) por motivarme a ser mejor matemático.
-* Al Dr. Christian Rubio Montiel por mostrarme otro lado de las matemáticas.
+* [RuberDavid](https://github.com/RuberDavid)
