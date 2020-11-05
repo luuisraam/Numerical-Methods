@@ -42,8 +42,9 @@ _En proceso de redacción._
 
 ## Construido con 🛠️
 
-* [SageMath](https://www.sagemath.org/) - Un programa matemático libre y de código abierto basado en Python.
-* [Lenguaje C](https://es.wikipedia.org/wiki/Dennis_Ritchie)
+* [SageMath - Lenguaje](https://www.sagemath.org/)
+* [C - Lenguaje](https://es.wikipedia.org/wiki/Dennis_Ritchie)
+* [Geany - IDE](https://www.geany.org/)
 
 ## Versión 📌
 * V1.1 - En construcción 
@@ -54,7 +55,7 @@ _En proceso de redacción._
 
 ## Licencia 📄
 
-## Agradecimientos 🎁
+## Aportaciones
 
 * A [RuberDavid](https://github.com/RuberDavid) por motivarme a ser mejor matemático.
 * Al Dr. Christian Rubio Montiel por mostrarme otro lado de las matemáticas.
