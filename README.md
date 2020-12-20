@@ -20,9 +20,9 @@
 - Interpolación
   - Método de Mínimos Cuadrados
   
-- Diferenciación Numérica
+- Diferenciación Numérica [Numerical Differentiation]
 
-- Integración Numérica
+- Integración Numérica [Numerical Integration]
   - Método de Integración Compuesta [Composite Numerical Integration] - composite_integration.sage
   - Método de Romberg [Romberg's Method] - romberg_method.sage
 
