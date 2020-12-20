@@ -17,8 +17,8 @@
   - Método de Newton
   - Método de Gauss Seidel
 
-- Interpolación
-  - Método de Mínimos Cuadrados
+- Interpolación [Interpolation]
+  - Método de Mínimos Cuadrados [Least Squares] - least_squares.sage
   
 - Diferenciación Numérica [Numerical Differentiation]
 
