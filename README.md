@@ -12,10 +12,10 @@
   - Método de Newton-Raphson [Newton-Raphson Method] - newton_raphson_method.c
   - Método de Bisección [Bisection Method] - bisection_method.c
   
-- Solución de Sistemas de Ecuaciones No Lineales
-  - Ḿétodo de Punto Fijo
-  - Método de Newton
-  - Método de Gauss Seidel
+- Solución de Sistemas de Ecuaciones No Lineales [Methods for Solving Systems of Nonlinear Equations]
+  - Ḿétodo de Punto Fijo [Fixed Point Method] - fixed_point_method.sage
+  - Método de Newton [Newton's Method] - newton_nonlinear_method.sage
+  - Método de Gauss-Seidel [Gauss-Seidel Method] - gauss_seidel_method.sage
 
 - Interpolación [Interpolation]
   - Método de Mínimos Cuadrados [Least Squares] - least_squares.sage
