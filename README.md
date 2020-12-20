@@ -23,7 +23,8 @@
 - Diferenciación Numérica
 
 - Integración Numérica
-
+  - Método de Integración Compuesta [Composite Numerical Integration] - composite_integration.sage
+  - Método de Romberg [Romberg's Method] - romberg_method.sage
 
 ## Ejecución 🔧
 
@@ -51,7 +52,7 @@ _En proceso de redacción._
 ## Versión 📌
 * V1.1 - En construcción 
 
-## Autores ✒️
+## Autores
 
 * [luuisraam](https://github.com/luuisraam) - **Luis Ramos**
 
