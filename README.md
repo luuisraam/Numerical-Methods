@@ -21,6 +21,8 @@
   - Método de Mínimos Cuadrados [Least Squares] - least_squares.sage
   
 - Diferenciación Numérica [Numerical Differentiation]
+  - Métodos de Diferenciación [Numerical Differentiation] - numerical_differentiation.sage
+  - Método de Richardson [Richardson's Method] - richardson_method.sage
 
 - Integración Numérica [Numerical Integration]
   - Método de Integración Compuesta [Composite Numerical Integration] - composite_integration.sage
