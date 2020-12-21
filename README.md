@@ -42,8 +42,8 @@ SageMath
 sage ejemplo.sage
 ```
 
-## Pruebas
-_En proceso de redacción._
+## Pruebas y Ejercicios
+TareaFinalMétodos.pdf
 
 ## Construido con
 
